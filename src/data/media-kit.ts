@@ -2,9 +2,19 @@ import type { MediaKit } from "@/types/media-kit";
 
 export const mediaKit: MediaKit = {
   site: {
-    title: "Lana Santos · Mídia Kit",
+    title: "Lana Santos | Mídia Kit de Beleza e Moda",
     description:
-      "Eu não indico produtos. Eu faço eles brilharem. Mídia kit de Lana Santos, Brazilian Beauty & Fashion Creator.",
+      "Mídia kit de Lana Santos, Brazilian Beauty & Fashion Creator. UGC, publi, review e live shop para marcas que querem desejo de verdade, não só alcance.",
+    keywords: [
+      "Lana Santos",
+      "mídia kit",
+      "criadora de conteúdo",
+      "UGC",
+      "beleza",
+      "moda",
+      "publicidade",
+      "influencer Brasil",
+    ],
   },
   contact: {
     email: "lanasantosmkt@gmail.com",

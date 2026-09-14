@@ -193,6 +193,7 @@ export type FooterContent = {
 export type SiteMeta = {
   title: string;
   description: string;
+  keywords: string[];
 };
 
 export type MediaKit = {
