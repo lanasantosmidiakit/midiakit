@@ -60,3 +60,8 @@ h4 {
 @utility animate-marquee-slow {
   animation: marquee 48s linear infinite;
 }
+
+#nl-badge-frame,
+iframe[title="Powered by Netlify"] {
+  display: none !important;
+}
