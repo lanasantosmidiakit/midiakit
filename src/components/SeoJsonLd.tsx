@@ -1,16 +1,21 @@
 import { mediaKit } from "@/data/media-kit";
-import { siteImage, siteUrl } from "@/lib/site";
+import { mediaKitUrl, siteImage, siteUrl } from "@/lib/site";
 
-export function SeoJsonLd() {
-  const { site, contact, hero } = mediaKit;
+type SeoJsonLdProps = {
+  page?: "home" | "midiakit";
+};
+
+export function SeoJsonLd({ page = "home" }: SeoJsonLdProps) {
+  const { site, contact, hero, linkInBio } = mediaKit;
   const logo = `${siteUrl}${siteImage.favicon}`;
+  const isMediaKit = page === "midiakit";
 
   const person = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Lana Santos",
     alternateName: ["lanasancost", "bylanasantos"],
-    description: site.description,
+    description: isMediaKit ? site.description : linkInBio.tagline,
     image: logo,
     jobTitle: "Brazilian Beauty & Fashion Creator",
     email: contact.email,
@@ -20,20 +25,33 @@ export function SeoJsonLd() {
     knowsAbout: ["beleza", "moda", "UGC", "conteúdo para marcas"],
   };
 
-  const webPage = {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    name: site.title,
-    description: site.description,
-    url: siteUrl,
-    inLanguage: "pt-BR",
-    headline: hero.headline.join(" "),
-    primaryImageOfPage: logo,
-    mainEntity: {
-      "@type": "Person",
-      name: "Lana Santos",
-    },
-  };
+  const webPage = isMediaKit
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        name: site.title,
+        description: site.description,
+        url: mediaKitUrl,
+        inLanguage: "pt-BR",
+        headline: hero.headline.join(" "),
+        primaryImageOfPage: logo,
+        mainEntity: {
+          "@type": "Person",
+          name: "Lana Santos",
+        },
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: linkInBio.name,
+        description: linkInBio.tagline,
+        url: siteUrl,
+        inLanguage: "pt-BR",
+        publisher: {
+          "@type": "Person",
+          name: "Lana Santos",
+        },
+      };
 
   return (
     <>

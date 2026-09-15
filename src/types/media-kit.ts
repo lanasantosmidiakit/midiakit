@@ -8,7 +8,9 @@ export type AspectRatio =
   | "feedback"
   | "poster"
   | "about"
-  | "measures";
+  | "measures"
+  | "tile"
+  | "bio";
 
 export type ThemeTone = "light" | "dark";
 
@@ -33,6 +35,32 @@ export type Contact = {
   phone: string;
   whatsappHref: string;
   socials: SocialLink[];
+};
+
+export type BioBanner = {
+  id: string;
+  title: string;
+  summary: string;
+  href: string;
+  image: ImageAsset;
+};
+
+export type BioCoupon = {
+  id: string;
+  title: string;
+  summary: string;
+  coupon: string;
+  href: string;
+  image: ImageAsset;
+};
+
+export type LinkInBioContent = {
+  name: string;
+  handle: string;
+  tagline: string;
+  image: ImageAsset;
+  banner: BioBanner;
+  coupons: BioCoupon[];
 };
 
 export type Metric = {
@@ -195,6 +223,7 @@ export type SiteMeta = {
 
 export type MediaKit = {
   site: SiteMeta;
+  linkInBio: LinkInBioContent;
   contact: Contact;
   hero: HeroContent;
   about: AboutContent;

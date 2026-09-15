@@ -11,6 +11,8 @@ export const ASPECT_CLASS: Record<AspectRatio, string> = {
   poster: "aspect-[2400/3600]",
   about: "aspect-[2400/2490]",
   measures: "aspect-[2400/2388]",
+  tile: "aspect-[500/500]",
+  bio: "aspect-[600/923]",
 };
 
 export const ASPECT_PIXELS: Record<AspectRatio, { width: number; height: number }> = {
@@ -24,6 +26,8 @@ export const ASPECT_PIXELS: Record<AspectRatio, { width: number; height: number 
   poster: { width: 2400, height: 3600 },
   about: { width: 2400, height: 2490 },
   measures: { width: 2400, height: 2388 },
+  tile: { width: 500, height: 500 },
+  bio: { width: 600, height: 923 },
 };
 
 const PLACEHOLDER_BG = "6B2136";

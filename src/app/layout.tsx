@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import { mediaKit } from "@/data/media-kit";
-import { SeoJsonLd } from "@/components/SeoJsonLd";
 import { siteImage, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -19,8 +18,9 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
 });
 
-const title = mediaKit.site.title;
-const description = mediaKit.site.description;
+const title = mediaKit.linkInBio.name;
+const description =
+  "Lana Santos, Brazilian Beauty & Fashion Creator. Instagram, TikTok, mídia kit e contato.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,12 +29,17 @@ export const metadata: Metadata = {
     template: "%s | Lana Santos",
   },
   description,
-  keywords: mediaKit.site.keywords,
-  applicationName: "Lana Santos Mídia Kit",
+  keywords: [
+    "Lana Santos",
+    "lanasancost",
+    "criadora de conteúdo",
+    "beleza",
+    "moda",
+  ],
+  applicationName: "Lana Santos",
   authors: [{ name: "Lana Santos", url: siteUrl }],
   creator: "Lana Santos",
   publisher: "Lana Santos",
-  category: "media kit",
   alternates: {
     canonical: "/",
   },
@@ -89,7 +94,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${openSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-cream font-sans text-coffee">
-        <SeoJsonLd />
         {children}
       </body>
     </html>
