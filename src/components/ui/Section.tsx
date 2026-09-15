@@ -66,7 +66,7 @@ export function SplitHeading({
 }: SplitHeadingProps) {
   return (
     <h2
-      className={`mt-4 font-serif text-4xl leading-[0.95] md:text-6xl lg:text-7xl ${className}`}
+      className={`font-serif text-4xl leading-[0.95] md:text-6xl lg:text-7xl ${className}`}
     >
       {title}
       {highlight ? (

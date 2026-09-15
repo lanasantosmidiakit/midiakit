@@ -1,5 +1,5 @@
 import { mediaKit } from "@/data/media-kit";
-import { Container, Section } from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 import { Marquee } from "@/components/ui/Marquee";
 import { ContactButton } from "@/components/ui/ContactButton";
 import { MediaImage } from "@/components/ui/MediaImage";
@@ -15,7 +15,7 @@ export function About() {
           <p className="text-sm uppercase tracking-[0.2em] opacity-60">
             {about.greeting}
           </p>
-          <h2 className="mt-2 font-serif text-5xl md:text-7xl">{about.title}</h2>
+          <SplitHeading title={about.title} className="mt-2" />
 
           <ul className="mt-12 grid gap-8 border-y border-coffee/10 py-10 sm:grid-cols-3">
             {about.anchors.map((anchor) => (

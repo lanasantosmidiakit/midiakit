@@ -7,7 +7,8 @@ export type AspectRatio =
   | "hero"
   | "feedback"
   | "poster"
-  | "about";
+  | "about"
+  | "measures";
 
 export type ThemeTone = "light" | "dark";
 
@@ -150,18 +151,11 @@ export type FeedbacksContent = {
   items: Feedback[];
 };
 
-export type ModelStat = {
-  id: string;
-  label: string;
-  value: string;
-};
-
 export type ModelStatsContent = {
   eyebrow: string;
   title: string;
-  note: string;
   shipping: string;
-  items: ModelStat[];
+  image: ImageAsset;
 };
 
 export type Deliverable = {

@@ -45,7 +45,7 @@ export const mediaKit: MediaKit = {
     legal:
       "© Lana Santos  ·  2026  ·  Todos os direitos reservados  ·  Material confidencial",
     image: {
-      src: "/media/hero/capa.png",
+      src: "/media/hero/capa_v2.png",
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "landscape",
       label: "Hero",
@@ -327,19 +327,14 @@ export const mediaKit: MediaKit = {
   },
   modelStats: {
     eyebrow: "08 · Tamanhos e medidas",
-    title: "Model Stats*",
-    note: "Os campos de pele e cabelo são o diferencial para marcas de beleza.",
+    title: "Tamanhos e medidas",
     shipping:
       "Endereço de envio sob solicitação, enviado por e-mail após o alinhamento da campanha.",
-    items: [
-      { id: "height", label: "Altura", value: "1,63" },
-      { id: "top", label: "Blusa / vestido", value: "P" },
-      { id: "bottom", label: "Calça", value: "36" },
-      { id: "shoes", label: "Calçado", value: "37" },
-      { id: "skin", label: "Tom de pele", value: "Oliva clara" },
-      { id: "skin-type", label: "Base de referência", value: "Mari Maria H2 · neutra claro" },
-      { id: "hair", label: "Cabelo", value: "Curto, levemente ondulado · castanho escuro" },
-    ],
+    image: {
+      alt: "Tamanhos e medidas de Lana Santos",
+      aspect: "measures",
+      src: "/media/modelStats/modelStats_v2.png",
+    },
   },
   deliverables: {
     eyebrow: "09 · Formatos de entrega",
@@ -373,7 +368,7 @@ export const mediaKit: MediaKit = {
         price: "R$ 500",
         body: "Sequência de imagens com direção visual própria, feita para viver no feed como referência estética. Ideal para lançamento, coleção e produto que precisa de desejo antes da explicação.",
         layout: "image-left",
-        tone: "dark",
+        tone: "light",
         gallery: "carousel",
         images: [
           { alt: "Carrossel 1", aspect: "portrait", src: "/media/deliverables/carrossel-1.jpg" },
@@ -392,7 +387,7 @@ export const mediaKit: MediaKit = {
         price: "R$ 1.000/h + 15% sobre as vendas",
         body: "Uma hora de demonstração ao vivo, respondendo dúvida em tempo real e mostrando o produto na pele. É o formato mais próximo da decisão de compra: a audiência tira a última objeção e compra ali.",
         layout: "image-right",
-        tone: "light",
+        tone: "dark",
         images: [
           { alt: "Live shop", aspect: "portrait", src: "/media/deliverables/live.jpg" },
         ],
@@ -404,7 +399,7 @@ export const mediaKit: MediaKit = {
         price: "Sob consulta",
         body: "Vídeos com estética orgânica produzidos para a marca usar nos próprios canais, landing pages e anúncios pagos. Entrega sem marca d’água, com alta qualidade de imagem e som, pensada para performar como conteúdo de criadora, não como peça publicitária.",
         layout: "image-left",
-        tone: "dark",
+        tone: "light",
         images: [
           {
             alt: "Conteúdo UGC, GRWM Bodyody",

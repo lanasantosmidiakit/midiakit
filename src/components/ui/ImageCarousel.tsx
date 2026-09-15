@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import type { ImageAsset, ThemeTone } from "@/types/media-kit";
 import { MediaImage } from "@/components/ui/MediaImage";
 
@@ -13,7 +13,7 @@ function ArrowIcon({ direction }: { direction: "prev" | "next" }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className={`size-5 ${direction === "prev" ? "rotate-180" : ""}`}
+      className={`size-4 ${direction === "prev" ? "rotate-180" : ""}`}
       fill="none"
       stroke="currentColor"
       strokeWidth="1.8"
@@ -24,113 +24,80 @@ function ArrowIcon({ direction }: { direction: "prev" | "next" }) {
   );
 }
 
-export function ImageCarousel({ images, tone = "dark" }: ImageCarouselProps) {
+export function ImageCarousel({ images, tone = "light" }: ImageCarouselProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const onDark = tone === "dark";
+  const visible = 3;
+  const maxIndex = Math.max(0, images.length - visible);
 
   function goTo(index: number) {
     const scroller = scrollerRef.current;
     if (!scroller || images.length === 0) return;
-    const next = (index + images.length) % images.length;
-    scroller.scrollTo({
-      left: next * scroller.clientWidth,
-      behavior: "smooth",
-    });
+    const next = Math.min(Math.max(index, 0), maxIndex);
+    const card = scroller.firstElementChild as HTMLElement | null;
+    const step = card ? card.offsetWidth + 8 : 0;
+    scroller.scrollTo({ left: next * step, behavior: "smooth" });
+    setActive(next);
   }
 
   function updateActive() {
     const scroller = scrollerRef.current;
     if (!scroller) return;
-    setActive(Math.round(scroller.scrollLeft / scroller.clientWidth));
+    const card = scroller.firstElementChild as HTMLElement | null;
+    const step = card ? card.offsetWidth + 8 : 1;
+    setActive(Math.min(Math.round(scroller.scrollLeft / step), maxIndex));
   }
 
-  useEffect(() => {
-    if (paused || images.length < 2) return;
-
-    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (media.matches) return;
-
-    const timer = window.setInterval(() => {
-      goTo(active + 1);
-    }, 4000);
-
-    return () => window.clearInterval(timer);
-  }, [active, paused, images.length]);
-
-  const arrowClass = `absolute top-1/2 z-10 flex size-10 -translate-y-1/2 items-center justify-center rounded-full backdrop-blur-sm transition ${
+  const arrowClass = `absolute top-1/2 z-10 flex size-8 -translate-y-1/2 items-center justify-center rounded-full border bg-cream/90 shadow-sm backdrop-blur-sm transition disabled:pointer-events-none disabled:opacity-30 ${
     onDark
-      ? "bg-cream/20 text-cream hover:bg-cream/35"
-      : "bg-coffee/20 text-coffee hover:bg-coffee/35"
+      ? "border-cream/20 bg-coffee/80 text-cream hover:bg-coffee"
+      : "border-coffee/15 text-coffee hover:bg-coffee hover:text-cream"
   }`;
 
   return (
-    <div
-      className="w-full"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
-      <div className="relative">
-        <div
-          ref={scrollerRef}
-          onScroll={updateActive}
-          className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden"
-        >
-          {images.map((image) => (
-            <div
-              key={image.src ?? image.alt}
-              className="w-full shrink-0 snap-start"
-            >
-              <MediaImage
-                {...image}
-                className="rounded-xl"
-                sizes="(min-width: 768px) 384px, 90vw"
-              />
-            </div>
-          ))}
-        </div>
-
-        {images.length > 1 ? (
-          <>
-            <button
-              type="button"
-              aria-label="Foto anterior"
-              className={`${arrowClass} left-3`}
-              onClick={() => goTo(active - 1)}
-            >
-              <ArrowIcon direction="prev" />
-            </button>
-            <button
-              type="button"
-              aria-label="Próxima foto"
-              className={`${arrowClass} right-3`}
-              onClick={() => goTo(active + 1)}
-            >
-              <ArrowIcon direction="next" />
-            </button>
-          </>
-        ) : null}
-      </div>
-
-      <div className="mt-4 flex justify-center gap-2">
-        {images.map((image, index) => (
-          <button
+    <div className="relative mx-auto w-full min-w-0 max-w-[316px]">
+      <div
+        ref={scrollerRef}
+        onScroll={updateActive}
+        className="flex min-w-0 snap-x snap-mandatory gap-2 overflow-x-auto px-1 [scrollbar-width:none] [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden"
+      >
+        {images.map((image) => (
+          <div
             key={image.src ?? image.alt}
-            type="button"
-            aria-label={`Ver ${image.alt}`}
-            aria-current={index === active}
-            className={`size-2 rounded-full transition ${
-              index === active
-                ? "bg-rose-gold"
-                : onDark
-                  ? "bg-cream/30"
-                  : "bg-coffee/20"
-            }`}
-            onClick={() => goTo(index)}
-          />
+            className="w-[100px] shrink-0 snap-start"
+          >
+            <MediaImage
+              {...image}
+              className="rounded-lg"
+              sizes="100px"
+            />
+          </div>
         ))}
       </div>
+
+      {images.length > visible ? (
+        <>
+          <button
+            type="button"
+            aria-label="Fotos anteriores"
+            className={`${arrowClass} -left-3`}
+            disabled={active <= 0}
+            onClick={() => goTo(active - 1)}
+          >
+            <ArrowIcon direction="prev" />
+          </button>
+          <button
+            type="button"
+            aria-label="Próximas fotos"
+            className={`${arrowClass} -right-3`}
+            disabled={active >= maxIndex}
+            onClick={() => goTo(active + 1)}
+          >
+            <ArrowIcon direction="next" />
+          </button>
+        </>
+      ) : null}
     </div>
   );
 }

@@ -1,27 +1,69 @@
+import type { ReactNode } from "react";
 import { mediaKit } from "@/data/media-kit";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { MediaVideo } from "@/components/ui/MediaVideo";
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import { PlayIcon } from "@/components/ui/PlayIcon";
 import { ContactButton } from "@/components/ui/ContactButton";
-import { Container, Section } from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 import type { Deliverable, ImageAsset } from "@/types/media-kit";
 
-function DeliverableVisual({ image }: { image: ImageAsset }) {
-  if (image.kind === "video") {
-    return <MediaVideo {...image} className="rounded-xl" />;
-  }
+function DeliverableTitle({ title, onDark }: { title: string; onDark: boolean }) {
+  const words = title.trim().split(" ");
+  const last = words.pop();
 
-  const frame = (
-    <MediaImage
-      {...image}
-      className="rounded-xl"
-      sizes="(min-width: 768px) 240px, 90vw"
-    />
+  return (
+    <h3 className="font-serif text-4xl leading-[0.95] md:text-5xl">
+      {words.length > 0 ? `${words.join(" ")} ` : null}
+      <span
+        className={`italic font-normal ${onDark ? "text-rose-gold" : "text-wine"}`}
+      >
+        {last}
+      </span>
+    </h3>
   );
+}
 
-  if (!image.href) {
-    return frame;
+function PhoneFrame({
+  children,
+  featured = false,
+}: {
+  children: ReactNode;
+  featured?: boolean;
+}) {
+  return (
+    <div
+      className={`relative overflow-hidden rounded-[1.55rem] bg-coffee shadow-[0_16px_36px_rgba(107,33,54,0.16)] ring-1 ring-black/10 ${
+        featured ? "w-[240px] lg:w-[280px]" : "w-[152px]"
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
+
+function DeliverableVisual({
+  image,
+  featured = false,
+}: {
+  image: ImageAsset;
+  featured?: boolean;
+}) {
+  const media =
+    image.kind === "video" ? (
+      <MediaVideo {...image} className="rounded-none" />
+    ) : (
+      <MediaImage
+        {...image}
+        className="rounded-none"
+        sizes={featured ? "(min-width: 1024px) 280px, 240px" : "152px"}
+      />
+    );
+
+  const framed = <PhoneFrame featured={featured}>{media}</PhoneFrame>;
+
+  if (image.kind === "video" || !image.href) {
+    return framed;
   }
 
   return (
@@ -29,67 +71,101 @@ function DeliverableVisual({ image }: { image: ImageAsset }) {
       href={image.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative block"
+      className="relative block w-fit"
       aria-label={`Assistir ${image.alt}`}
     >
-      {frame}
-      <span className="absolute inset-0 flex items-center justify-center rounded-xl bg-black/20">
-        <PlayIcon />
+      {framed}
+      <span className="absolute inset-0 flex items-center justify-center rounded-[1.55rem] bg-black/20">
+        <PlayIcon size="sm" />
       </span>
     </a>
   );
 }
 
-function DeliverableBlock({ item }: { item: Deliverable }) {
-  const imageFirst = item.layout === "image-left";
-  const onDark = item.tone === "dark";
+function DeliverableMedia({
+  item,
+  featured = false,
+}: {
+  item: Deliverable;
+  featured?: boolean;
+}) {
+  if (item.gallery === "carousel") {
+    return <ImageCarousel images={item.images} tone={item.tone} />;
+  }
 
   return (
-    <article className={onDark ? "bg-coffee text-cream" : "bg-cream text-coffee"}>
-      <Container className="flex flex-col gap-8 py-16 md:flex-row md:items-center md:justify-between md:gap-14 md:py-24">
-        <div className={`max-w-xl ${imageFirst ? "md:order-2" : ""}`}>
-          <p
-            className={`text-[11px] uppercase tracking-[0.2em] ${
-              onDark ? "text-rose-gold" : "opacity-50"
-            }`}
-          >
-            {item.tags}
-          </p>
-          <h3 className="mt-3 font-serif text-3xl md:text-5xl">{item.title}</h3>
-          <p
-            className={`mt-6 text-base leading-relaxed md:text-lg ${
-              onDark ? "text-cream/80" : ""
-            }`}
-          >
-            {item.body}
-          </p>
-        </div>
-        <div
-          className={`w-full shrink-0 ${
-            item.gallery === "carousel" ? "max-w-sm" : "max-w-xs"
-          } ${imageFirst ? "md:order-1" : ""}`}
-        >
-          {item.gallery === "carousel" ? (
-            <ImageCarousel images={item.images} tone={item.tone} />
-          ) : (
-            <div
-              className={`grid gap-3 ${
-                item.images.length > 2
-                  ? "grid-cols-3"
-                  : item.images.length === 2
-                    ? "grid-cols-2"
-                    : "grid-cols-1"
-              }`}
-            >
-              {item.images.map((image) => (
-                <DeliverableVisual
-                  key={image.src ?? image.alt}
-                  image={image}
-                />
-              ))}
+    <div className="flex justify-center">
+      {item.images.map((image) => (
+        <DeliverableVisual
+          key={image.src ?? image.alt}
+          image={image}
+          featured={featured}
+        />
+      ))}
+    </div>
+  );
+}
+
+function DeliverableBlock({
+  item,
+  showDivider,
+}: {
+  item: Deliverable;
+  showDivider: boolean;
+}) {
+  const onDark = item.tone === "dark";
+  const breakout = onDark;
+
+  return (
+    <article
+      className={`overflow-visible ${
+        onDark ? "bg-coffee text-cream" : "bg-cream text-coffee"
+      } ${breakout ? "relative z-10" : ""}`}
+    >
+      <Container
+        className={`py-14 md:py-16 ${
+          showDivider ? "border-t border-coffee/15" : ""
+        }`}
+      >
+        {onDark ? (
+          <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:gap-16">
+            <div>
+              <DeliverableTitle title={item.title} onDark />
+              <p className="mt-4 text-[11px] uppercase tracking-[0.2em] text-rose-gold">
+                {item.tags}
+              </p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/80 md:text-lg">
+                {item.body}
+              </p>
             </div>
-          )}
-        </div>
+            <div className="relative z-10 mx-auto w-fit lg:mx-0 lg:h-full lg:w-[280px]">
+              <div className="lg:absolute lg:left-0 lg:top-1/2 lg:w-[280px] lg:-translate-y-1/2">
+                <DeliverableMedia item={item} featured />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div
+            className={`grid items-center gap-8 lg:gap-12 ${
+              item.gallery === "carousel"
+                ? "lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.1fr)_minmax(280px,340px)]"
+                : "lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.2fr)_auto]"
+            }`}
+          >
+            <div>
+              <DeliverableTitle title={item.title} onDark={false} />
+              <p className="mt-4 text-[11px] uppercase tracking-[0.2em] opacity-50">
+                {item.tags}
+              </p>
+            </div>
+            <p className="max-w-xl text-sm leading-relaxed md:text-base">
+              {item.body}
+            </p>
+            <div className="flex min-w-0 w-full justify-center">
+              <DeliverableMedia item={item} />
+            </div>
+          </div>
+        )}
       </Container>
     </article>
   );
@@ -99,15 +175,23 @@ export function Deliverables() {
   const { deliverables } = mediaKit;
 
   return (
-    <Section id="formatos" tone="light">
-      <Container className="py-16 md:pb-8 md:pt-24">
-        <h2 className="font-serif text-4xl uppercase tracking-[0.08em] md:text-6xl">
-          {deliverables.title}
-        </h2>
+    <Section id="formatos" tone="light" className="overflow-visible">
+      <Container className="pt-8 pb-8 md:pt-12 md:pb-8">
+        <SplitHeading title={deliverables.title} />
       </Container>
-      {deliverables.items.map((item) => (
-        <DeliverableBlock key={item.id} item={item} />
-      ))}
+      {deliverables.items.map((item, index) => {
+        const previous = deliverables.items[index - 1];
+        const showDivider =
+          index > 0 && item.tone !== "dark" && previous?.tone !== "dark";
+
+        return (
+          <DeliverableBlock
+            key={item.id}
+            item={item}
+            showDivider={showDivider}
+          />
+        );
+      })}
       <Container className="py-16 md:py-20">
         <p className="max-w-3xl text-sm leading-relaxed opacity-60">
           {deliverables.footerNote}

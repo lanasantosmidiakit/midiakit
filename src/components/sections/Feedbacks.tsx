@@ -1,16 +1,14 @@
 import { mediaKit } from "@/data/media-kit";
 import { MediaImage } from "@/components/ui/MediaImage";
-import { Container, Section } from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function Feedbacks() {
   const { feedbacks } = mediaKit;
 
   return (
     <Section id="feedbacks" tone="light">
-      <Container className="py-16 md:py-24">
-        <h2 className="font-serif text-4xl uppercase tracking-[0.12em] md:text-6xl">
-          {feedbacks.title}
-        </h2>
+      <Container className="pt-16 pb-8 md:pt-24 md:pb-12">
+        <SplitHeading title={feedbacks.title} />
         <ul className="mt-12 grid gap-6 md:grid-cols-3">
           {feedbacks.items.map((item) => (
             <li key={item.id}>

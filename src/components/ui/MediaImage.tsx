@@ -36,7 +36,7 @@ export function MediaImage({
     : ASPECT_CLASS[aspect];
 
   return (
-    <div className={`relative overflow-hidden bg-coffee/20 ${frameClass} ${className}`}>
+    <div className={`relative w-full overflow-hidden bg-coffee/20 ${frameClass} ${className}`}>
       <Image
         src={url}
         alt={alt}

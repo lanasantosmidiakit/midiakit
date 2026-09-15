@@ -14,7 +14,6 @@ export function Profile() {
           <SplitHeading
             title={profile.title}
             highlight={profile.highlight}
-            className="md:text-7xl"
           />
           <p className="mt-5 text-sm text-cream/65 md:text-base">
             {profile.subtitle}
@@ -35,9 +34,6 @@ export function Profile() {
 
         <p className="mx-auto mt-16 max-w-3xl text-center text-base leading-relaxed text-cream/80 md:text-lg">
           {profile.body}
-        </p>
-        <p className="mx-auto mt-6 max-w-3xl text-center text-sm italic text-cream/60">
-          {profile.caseNote}
         </p>
         <div className="mt-12 flex justify-center">
           <ContactButton tone="dark" />
