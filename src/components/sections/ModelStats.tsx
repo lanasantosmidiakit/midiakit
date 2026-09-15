@@ -16,7 +16,7 @@ export function ModelStats() {
             {...modelStats.image}
             className="rounded-2xl !bg-transparent"
             sizes="(min-width: 768px) 896px, 90vw"
-            quality={90}
+            quality={100}
           />
         </div>
 

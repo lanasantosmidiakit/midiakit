@@ -32,6 +32,7 @@ export function Brands() {
                 alt={index < brands.items.length ? brand.logo.alt : ""}
                 width={360}
                 height={140}
+                quality={100}
                 className="h-24 w-auto object-contain invert mix-blend-screen"
               />
             </li>

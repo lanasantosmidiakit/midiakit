@@ -26,7 +26,7 @@ export function MediaImage({
   priority = false,
   sizes = "100vw",
   unconstrained = false,
-  quality = 75,
+  quality = 100,
   unoptimized,
 }: MediaImageProps) {
   const url = src ?? placeholderUrl(aspect, label);

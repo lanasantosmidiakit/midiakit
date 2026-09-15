@@ -23,7 +23,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "bio",
-      src: "/media/linknabio/perfil_v2.png",
+      src: "/media/linknabio/perfil_v4.webp",
     },
     banner: {
       id: "midiakit",
@@ -33,7 +33,7 @@ export const mediaKit: MediaKit = {
       image: {
         alt: "Mídia kit Lana Santos",
         aspect: "tile",
-        src: "/media/linknabio/banner1.jpg",
+        src: "/media/linknabio/banner1_v2.webp",
       },
     },
     coupons: [
@@ -46,7 +46,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "MAC Cosmetics",
           aspect: "tile",
-          src: "/media/linknabio/banner2.jpg",
+          src: "/media/linknabio/banner2.webp",
         },
       },
       {
@@ -58,7 +58,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Cléa Store",
           aspect: "tile",
-          src: "/media/linknabio/banner3.jpg",
+          src: "/media/linknabio/banner3.webp",
         },
       },
       {
@@ -70,7 +70,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Aura Beauty",
           aspect: "tile",
-          src: "/media/linknabio/banner4.jpg",
+          src: "/media/linknabio/banner4.webp",
         },
       },
       {
@@ -82,7 +82,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Arm Fitness",
           aspect: "tile",
-          src: "/media/linknabio/banner5.jpg",
+          src: "/media/linknabio/banner5.webp",
         },
       },
       {
@@ -94,7 +94,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Saint Germain",
           aspect: "tile",
-          src: "/media/linknabio/banner6.jpg",
+          src: "/media/linknabio/banner6.webp",
         },
       },
     ],
@@ -128,7 +128,7 @@ export const mediaKit: MediaKit = {
     legal:
       "© Lana Santos  ·  2026  ·  Todos os direitos reservados  ·  Material confidencial",
     image: {
-      src: "/media/hero/capa_v2.png",
+      src: "/media/hero/capa_v2.webp",
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "landscape",
       label: "Hero",
@@ -169,7 +169,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Lana Santos",
       aspect: "about",
-      src: "/media/about/quemsoueu_v4.png",
+      src: "/media/about/quemsoueu_v4.webp",
     },
   },
   profile: {
@@ -225,17 +225,17 @@ export const mediaKit: MediaKit = {
       {
         alt: "Análise do TikTok, visão geral",
         aspect: "story",
-        src: "/media/profile/tiktok-visao-geral.png",
+        src: "/media/profile/tiktok-visao-geral.webp",
       },
       {
         alt: "Análise do TikTok, espectadores",
         aspect: "story",
-        src: "/media/profile/tiktok-espectadores.png",
+        src: "/media/profile/tiktok-espectadores.webp",
       },
       {
         alt: "Análise do TikTok, seguidores",
         aspect: "story",
-        src: "/media/profile/tiktok-seguidores.png",
+        src: "/media/profile/tiktok-seguidores.webp",
       },
     ],
   },
@@ -297,7 +297,7 @@ export const mediaKit: MediaKit = {
       {
         alt: "Lana Santos, conteúdo Poetiza 32",
         aspect: "poster",
-        src: "/media/content/poetiza32.jpg",
+        src: "/media/content/poetiza32.webp",
       },
     ],
     resultsTitle: "Meus maiores resultados",
@@ -314,7 +314,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Reel Kit The Essentials",
           aspect: "story",
-          src: "/media/content/kit-essentials.jpg",
+          src: "/media/content/kit-essentials.webp",
         },
       },
       {
@@ -327,7 +327,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Reel Cléa Store, look para o Dia dos Namorados",
           aspect: "story",
-          src: "/media/content/clea-look.jpg",
+          src: "/media/content/clea-look.webp",
         },
       },
       {
@@ -340,7 +340,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Reel Aura Beauty Diana Glam",
           aspect: "story",
-          src: "/media/content/aura-diana-glam.jpg",
+          src: "/media/content/aura-diana-glam.webp",
         },
       },
       {
@@ -353,7 +353,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Reel Gocase Self Love Club",
           aspect: "story",
-          src: "/media/content/gocase-self-love.jpg",
+          src: "/media/content/gocase-self-love.webp",
         },
       },
     ],
@@ -365,15 +365,15 @@ export const mediaKit: MediaKit = {
     intro:
       "Marcas que já entraram no meu universo e saíram dele com conteúdo, comentário e venda. Meu público comenta, compartilha e compra.",
     items: [
-      { id: "gocase", name: "Gocase", logo: { alt: "Gocase", aspect: "landscape", src: "/media/logos/1.png" } },
-      { id: "mac", name: "MAC", logo: { alt: "MAC", aspect: "landscape", src: "/media/logos/2.png" } },
-      { id: "too-faced", name: "Too Faced", logo: { alt: "Too Faced", aspect: "landscape", src: "/media/logos/3.png" } },
-      { id: "clea-store", name: "Cléa Store", logo: { alt: "Cléa Store", aspect: "landscape", src: "/media/logos/4.png" } },
-      { id: "aura-beauty", name: "Aura Beauty", logo: { alt: "Aura Beauty", aspect: "landscape", src: "/media/logos/5.png" } },
-      { id: "saint-germain", name: "Saint Germain", logo: { alt: "Saint Germain", aspect: "landscape", src: "/media/logos/6.png" } },
-      { id: "arm-fitness", name: "Arm Fitness", logo: { alt: "Arm Fitness", aspect: "landscape", src: "/media/logos/7.png" } },
-      { id: "pink-perfect", name: "Pink Perfect", logo: { alt: "Pink Perfect", aspect: "landscape", src: "/media/logos/8.png" } },
-      { id: "nina-makeup", name: "Nina Makeup", logo: { alt: "Nina Makeup", aspect: "landscape", src: "/media/logos/9.png" } },
+      { id: "gocase", name: "Gocase", logo: { alt: "Gocase", aspect: "landscape", src: "/media/logos/1.webp" } },
+      { id: "mac", name: "MAC", logo: { alt: "MAC", aspect: "landscape", src: "/media/logos/2.webp" } },
+      { id: "too-faced", name: "Too Faced", logo: { alt: "Too Faced", aspect: "landscape", src: "/media/logos/3.webp" } },
+      { id: "clea-store", name: "Cléa Store", logo: { alt: "Cléa Store", aspect: "landscape", src: "/media/logos/4.webp" } },
+      { id: "aura-beauty", name: "Aura Beauty", logo: { alt: "Aura Beauty", aspect: "landscape", src: "/media/logos/5.webp" } },
+      { id: "saint-germain", name: "Saint Germain", logo: { alt: "Saint Germain", aspect: "landscape", src: "/media/logos/6.webp" } },
+      { id: "arm-fitness", name: "Arm Fitness", logo: { alt: "Arm Fitness", aspect: "landscape", src: "/media/logos/7.webp" } },
+      { id: "pink-perfect", name: "Pink Perfect", logo: { alt: "Pink Perfect", aspect: "landscape", src: "/media/logos/8.webp" } },
+      { id: "nina-makeup", name: "Nina Makeup", logo: { alt: "Nina Makeup", aspect: "landscape", src: "/media/logos/9.webp" } },
     ],
   },
   feedbacks: {
@@ -386,7 +386,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Feedback da Cléa Store",
           aspect: "feedback",
-          src: "/media/feedbacks/1.png",
+          src: "/media/feedbacks/1.webp",
         },
       },
       {
@@ -395,7 +395,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Feedback da Pink Perfect",
           aspect: "feedback",
-          src: "/media/feedbacks/2.png",
+          src: "/media/feedbacks/2.webp",
         },
       },
       {
@@ -404,7 +404,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Feedback da Bostanten",
           aspect: "feedback",
-          src: "/media/feedbacks/3.png",
+          src: "/media/feedbacks/3.webp",
         },
       },
     ],
@@ -417,7 +417,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Tamanhos e medidas de Lana Santos",
       aspect: "measures",
-      src: "/media/modelStats/modelStats_v2.png",
+      src: "/media/modelStats/modelStats_v2.webp",
     },
   },
   deliverables: {
@@ -440,7 +440,7 @@ export const mediaKit: MediaKit = {
           {
             alt: "Publi no feed",
             aspect: "story",
-            src: "/media/deliverables/publinofeed.jpg",
+            src: "/media/deliverables/publinofeed.webp",
             href: "https://www.instagram.com/reel/DaAr_b8BVZU/",
           },
         ],
@@ -455,13 +455,13 @@ export const mediaKit: MediaKit = {
         tone: "light",
         gallery: "carousel",
         images: [
-          { alt: "Carrossel 1", aspect: "portrait", src: "/media/deliverables/carrossel-1.jpg" },
-          { alt: "Carrossel 2", aspect: "portrait", src: "/media/deliverables/carrossel-2.jpg" },
-          { alt: "Carrossel 3", aspect: "portrait", src: "/media/deliverables/carrossel-3.jpg" },
-          { alt: "Carrossel 4", aspect: "portrait", src: "/media/deliverables/carrossel-4.jpg" },
-          { alt: "Carrossel 5", aspect: "portrait", src: "/media/deliverables/carrossel-5.jpg" },
-          { alt: "Carrossel 6", aspect: "portrait", src: "/media/deliverables/carrossel-6.jpg" },
-          { alt: "Carrossel 7", aspect: "portrait", src: "/media/deliverables/carrossel-7.jpg" },
+          { alt: "Carrossel 1", aspect: "portrait", src: "/media/deliverables/carrossel-1.webp" },
+          { alt: "Carrossel 2", aspect: "portrait", src: "/media/deliverables/carrossel-2.webp" },
+          { alt: "Carrossel 3", aspect: "portrait", src: "/media/deliverables/carrossel-3.webp" },
+          { alt: "Carrossel 4", aspect: "portrait", src: "/media/deliverables/carrossel-4.webp" },
+          { alt: "Carrossel 5", aspect: "portrait", src: "/media/deliverables/carrossel-5.webp" },
+          { alt: "Carrossel 6", aspect: "portrait", src: "/media/deliverables/carrossel-6.webp" },
+          { alt: "Carrossel 7", aspect: "portrait", src: "/media/deliverables/carrossel-7.webp" },
         ],
       },
       {
@@ -473,7 +473,7 @@ export const mediaKit: MediaKit = {
         layout: "image-right",
         tone: "dark",
         images: [
-          { alt: "Live shop", aspect: "portrait", src: "/media/deliverables/live.jpg" },
+          { alt: "Live shop", aspect: "portrait", src: "/media/deliverables/live.webp" },
         ],
       },
       {
@@ -488,7 +488,7 @@ export const mediaKit: MediaKit = {
           {
             alt: "Conteúdo UGC, GRWM Bodyody",
             aspect: "story",
-            src: "/media/deliverables/ugc.jpg",
+            src: "/media/deliverables/ugc.webp",
             href: "https://www.instagram.com/reel/DaS2ROuBMmr/",
           },
         ],
@@ -506,7 +506,7 @@ export const mediaKit: MediaKit = {
             alt: "Presença em evento",
             aspect: "story",
             kind: "video",
-            src: "/media/deliverables/presencaeventos.mp4",
+            src: "https://linksvibe.com.br/aux-videos/lanasancost-video-1.mp4",
           },
         ],
       },
@@ -521,7 +521,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Lana Santos",
       aspect: "poster",
-      src: "/media/footer/footer.jpg",
+      src: "/media/footer/footer.webp",
     },
   },
 };

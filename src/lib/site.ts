@@ -6,6 +6,6 @@ export const mediaKitPath = "/midiakit";
 export const mediaKitUrl = `${siteUrl}${mediaKitPath}`;
 
 export const siteImage = {
-  favicon: "/media/logo.jpg",
-  share: "/media/logo.jpg",
+  favicon: "/media/logo.webp",
+  share: "/media/logo.webp",
 };
