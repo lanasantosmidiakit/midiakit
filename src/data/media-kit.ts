@@ -77,15 +77,16 @@ export const mediaKit: MediaKit = {
       },
     ],
     paragraphs: [
-      "Sou criadora de conteúdo de beleza e moda. Cabelo curto, pele glow e uma obsessão saudável por produto bom: é assim que as pessoas me reconhecem.",
-      "Em um ano de estrada, construí uma audiência que não só assiste. Ela compra. Meus formatos favoritos são tutorial, teste e review, porque é onde eu consigo provar o produto na prática e transformar curiosidade em decisão.",
-      "Eu não trabalho com volume de publi. Trabalho com marca que tem história, produto que eu usaria e conteúdo pensado para gerar desejo. Quando uma marca entra no meu feed, ela entra dentro do meu universo, e é isso que faz a audiência confiar.",
+      "Sou aquela creator que ama um glow, tenho algumas obsessões em produtinhos que valem a pena e de vez em quando algumas opiniões nada neutras. Sou conhecida pelo meu corte de cabelo e o blush que a gente ama, é assim que a minha audiência me conhece e se identifica comigo.",
+      "Em pouco tempo, fui construindo uma comunidade que gosta de acompanhar não só o que eu uso, mas também o que eu realmente acho. Uma mistura entre moda e beleza, com muitos produtinhos, testes e compartilhando minhas descobertas de um jeito leve e sincero.",
+      "Por isso, quando escolho uma marca para fazer parte do meu conteúdo, quero que faça sentido para mim e para quem me acompanha. Além de ser uma criadora de resultado, quero trazer verdade, conexão e que a pessoa tenha vontade de conhecer também.",
+      "Tenho certeza que você será a próxima marca que fará sentido comigo e o meu universo brilhante.",
     ],
     close: "Minha audiência não passa pelo conteúdo. Ela mora nele.",
     image: {
       alt: "Lana Santos",
       aspect: "about",
-      src: "/media/about/quemsoueu.jpg",
+      src: "/media/about/quemsoueu_v4.png",
     },
   },
   profile: {

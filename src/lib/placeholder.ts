@@ -9,7 +9,7 @@ export const ASPECT_CLASS: Record<AspectRatio, string> = {
   hero: "aspect-[4/5] md:aspect-[16/10] lg:aspect-[16/9]",
   feedback: "aspect-[1206/1260]",
   poster: "aspect-[2400/3600]",
-  about: "aspect-[2400/1400]",
+  about: "aspect-[2400/2490]",
   measures: "aspect-[2400/2388]",
 };
 
@@ -22,7 +22,7 @@ export const ASPECT_PIXELS: Record<AspectRatio, { width: number; height: number 
   hero: { width: 1920, height: 1080 },
   feedback: { width: 1206, height: 1260 },
   poster: { width: 2400, height: 3600 },
-  about: { width: 2400, height: 1400 },
+  about: { width: 2400, height: 2490 },
   measures: { width: 2400, height: 2388 },
 };
 
