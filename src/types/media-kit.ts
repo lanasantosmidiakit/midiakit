@@ -6,7 +6,8 @@ export type AspectRatio =
   | "wide"
   | "hero"
   | "feedback"
-  | "poster";
+  | "poster"
+  | "about";
 
 export type ThemeTone = "light" | "dark";
 
@@ -65,6 +66,7 @@ export type AboutContent = {
   anchors: Metric[];
   paragraphs: string[];
   close: string;
+  image: ImageAsset;
 };
 
 export type ProfileContent = {

@@ -1,12 +1,7 @@
 import { mediaKit } from "@/data/media-kit";
 import { BarChart } from "@/components/ui/BarChart";
 import { ProfileShowcase } from "@/components/sections/ProfileShowcase";
-import {
-  Container,
-  Eyebrow,
-  Section,
-  SplitHeading,
-} from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function Profile() {
   const { profile } = mediaKit;
@@ -15,7 +10,6 @@ export function Profile() {
     <Section id="perfil" tone="dark" className="overflow-hidden">
       <Container className="max-w-7xl py-16 md:py-28">
         <div className="mx-auto max-w-2xl text-center">
-          <Eyebrow>{profile.eyebrow}</Eyebrow>
           <SplitHeading
             title={profile.title}
             highlight={profile.highlight}

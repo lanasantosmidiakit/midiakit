@@ -1,11 +1,6 @@
 import { mediaKit } from "@/data/media-kit";
 import { ContactButton } from "@/components/ui/ContactButton";
-import {
-  Container,
-  Eyebrow,
-  Section,
-  SplitHeading,
-} from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function Contact() {
   const { footer, contact } = mediaKit;
@@ -13,7 +8,6 @@ export function Contact() {
   return (
     <Section id="contato" tone="dark">
       <Container className="py-20 md:py-28">
-        <Eyebrow>{footer.eyebrow}</Eyebrow>
         <SplitHeading
           title={footer.title}
           highlight={footer.highlight}

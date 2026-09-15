@@ -1,6 +1,6 @@
 import { mediaKit } from "@/data/media-kit";
 import { ContactButton } from "@/components/ui/ContactButton";
-import { Container, Eyebrow, Section } from "@/components/ui/Section";
+import { Container, Section } from "@/components/ui/Section";
 
 const SIZE_IDS = new Set(["height", "top", "bottom", "shoes"]);
 
@@ -17,8 +17,7 @@ export function ModelStats() {
   return (
     <Section id="medidas" tone="light">
       <Container className="py-16 md:py-24">
-        <Eyebrow>{modelStats.eyebrow}</Eyebrow>
-        <h2 className="mt-4 font-serif text-4xl md:text-6xl">
+        <h2 className="font-serif text-4xl md:text-6xl">
           {modelStats.title}
         </h2>
 

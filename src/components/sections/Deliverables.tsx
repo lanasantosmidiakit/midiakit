@@ -4,7 +4,7 @@ import { MediaVideo } from "@/components/ui/MediaVideo";
 import { ImageCarousel } from "@/components/ui/ImageCarousel";
 import { PlayIcon } from "@/components/ui/PlayIcon";
 import { ContactButton } from "@/components/ui/ContactButton";
-import { Container, Eyebrow, Section } from "@/components/ui/Section";
+import { Container, Section } from "@/components/ui/Section";
 import type { Deliverable, ImageAsset } from "@/types/media-kit";
 
 function DeliverableVisual({ image }: { image: ImageAsset }) {
@@ -101,8 +101,7 @@ export function Deliverables() {
   return (
     <Section id="formatos" tone="light">
       <Container className="py-16 md:pb-8 md:pt-24">
-        <Eyebrow>{deliverables.eyebrow}</Eyebrow>
-        <h2 className="mt-4 font-serif text-4xl uppercase tracking-[0.08em] md:text-6xl">
+        <h2 className="font-serif text-4xl uppercase tracking-[0.08em] md:text-6xl">
           {deliverables.title}
         </h2>
       </Container>

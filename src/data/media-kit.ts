@@ -82,6 +82,11 @@ export const mediaKit: MediaKit = {
       "Eu não trabalho com volume de publi. Trabalho com marca que tem história, produto que eu usaria e conteúdo pensado para gerar desejo. Quando uma marca entra no meu feed, ela entra dentro do meu universo, e é isso que faz a audiência confiar.",
     ],
     close: "Minha audiência não passa pelo conteúdo. Ela mora nele.",
+    image: {
+      alt: "Lana Santos",
+      aspect: "about",
+      src: "/media/about/quemsoueu.jpg",
+    },
   },
   profile: {
     eyebrow: "03 · Os números que importam",
@@ -197,8 +202,8 @@ export const mediaKit: MediaKit = {
   },
   contentCreation: {
     eyebrow: "05 · Conteúdo que converte",
-    title: "UGC that",
-    highlight: "converts",
+    title: "UGC conteúdo que",
+    highlight: "converte",
     rating: "★★★★★",
     paragraphs: [
       "Agora imagine tirar o orçamento de criadoras que só entregam alcance e colocar em quem realmente move o produto. É essa a diferença: eu não produzo um anúncio disfarçado, produzo conteúdo que a sua audiência assiste por vontade própria, e que faz a sua marca virar desejo.",

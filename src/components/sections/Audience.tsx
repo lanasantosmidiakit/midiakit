@@ -1,12 +1,7 @@
 import { mediaKit } from "@/data/media-kit";
 import { AudienceChannels } from "@/components/sections/AudienceChannels";
 import { ContactButton } from "@/components/ui/ContactButton";
-import {
-  Container,
-  Eyebrow,
-  Section,
-  SplitHeading,
-} from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function Audience() {
   const { audience } = mediaKit;
@@ -16,7 +11,6 @@ export function Audience() {
       <Container className="py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-2 md:gap-16">
           <div>
-            <Eyebrow>{audience.eyebrow}</Eyebrow>
             <SplitHeading title={audience.title} highlight={audience.highlight} />
           </div>
           <div className="flex flex-col gap-6 text-base leading-relaxed md:text-lg">

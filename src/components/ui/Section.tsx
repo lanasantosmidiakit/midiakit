@@ -38,21 +38,6 @@ export function Container({ children, className = "" }: ContainerProps) {
   );
 }
 
-type EyebrowProps = {
-  children: string;
-  className?: string;
-};
-
-export function Eyebrow({ children, className = "" }: EyebrowProps) {
-  return (
-    <p
-      className={`text-xs font-medium uppercase tracking-[0.22em] opacity-70 ${className}`}
-    >
-      {children}
-    </p>
-  );
-}
-
 type CopyProps = {
   children: string;
   className?: string;

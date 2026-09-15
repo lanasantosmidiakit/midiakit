@@ -1,11 +1,6 @@
 import Image from "next/image";
 import { mediaKit } from "@/data/media-kit";
-import {
-  Container,
-  Eyebrow,
-  Section,
-  SplitHeading,
-} from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function Brands() {
   const { brands } = mediaKit;
@@ -14,7 +9,6 @@ export function Brands() {
   return (
     <Section id="marcas" tone="dark">
       <Container className="pt-8 pb-16 md:pt-12 md:pb-24">
-        <Eyebrow>{brands.eyebrow}</Eyebrow>
         <SplitHeading title={brands.title} highlight={brands.highlight} />
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream/75 md:text-lg">
           {brands.intro}

@@ -2,12 +2,7 @@ import { mediaKit } from "@/data/media-kit";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { ContactButton } from "@/components/ui/ContactButton";
 import { ResultCarousel } from "@/components/sections/ResultCarousel";
-import {
-  Container,
-  Eyebrow,
-  Section,
-  SplitHeading,
-} from "@/components/ui/Section";
+import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function ContentCreation() {
   const { contentCreation } = mediaKit;
@@ -17,7 +12,6 @@ export function ContentCreation() {
       <Container className="pt-16 pb-8 md:pt-24 md:pb-12">
         <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.7fr)]">
           <div>
-            <Eyebrow>{contentCreation.eyebrow}</Eyebrow>
             <SplitHeading
               title={contentCreation.title}
               highlight={contentCreation.highlight}
