@@ -57,13 +57,13 @@ export function ModelStats() {
           </ul>
         ) : null}
 
-        <div className="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-xl">
-            <p className="text-sm opacity-60">{modelStats.note}</p>
-            <p className="mt-3 text-base leading-relaxed md:text-lg">
-              {modelStats.shipping}
-            </p>
-          </div>
+        <div className="mt-10 max-w-xl">
+          <p className="text-sm opacity-60">{modelStats.note}</p>
+          <p className="mt-3 text-base leading-relaxed md:text-lg">
+            {modelStats.shipping}
+          </p>
+        </div>
+        <div className="mt-12 flex justify-center">
           <ContactButton />
         </div>
       </Container>

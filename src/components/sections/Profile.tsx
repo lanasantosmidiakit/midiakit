@@ -1,6 +1,7 @@
 import { mediaKit } from "@/data/media-kit";
 import { BarChart } from "@/components/ui/BarChart";
 import { ProfileShowcase } from "@/components/sections/ProfileShowcase";
+import { ContactButton } from "@/components/ui/ContactButton";
 import { Container, Section, SplitHeading } from "@/components/ui/Section";
 
 export function Profile() {
@@ -38,6 +39,9 @@ export function Profile() {
         <p className="mx-auto mt-6 max-w-3xl text-center text-sm italic text-cream/60">
           {profile.caseNote}
         </p>
+        <div className="mt-12 flex justify-center">
+          <ContactButton tone="dark" />
+        </div>
       </Container>
     </Section>
   );

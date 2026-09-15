@@ -63,7 +63,9 @@ export function ContentCreation() {
             {contentCreation.resultsBody}
           </p>
           <ResultCarousel results={contentCreation.results} />
-          <ContactButton tone="dark" className="mt-12" />
+          <div className="mt-12 flex justify-center">
+            <ContactButton tone="dark" />
+          </div>
         </div>
       </Container>
     </Section>

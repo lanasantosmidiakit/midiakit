@@ -190,6 +190,7 @@ export type FooterContent = {
   highlight: string;
   body: string;
   legal: string;
+  image: ImageAsset;
 };
 
 export type SiteMeta = {

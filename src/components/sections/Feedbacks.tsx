@@ -1,6 +1,5 @@
 import { mediaKit } from "@/data/media-kit";
 import { MediaImage } from "@/components/ui/MediaImage";
-import { ContactButton } from "@/components/ui/ContactButton";
 import { Container, Section } from "@/components/ui/Section";
 
 export function Feedbacks() {
@@ -32,7 +31,6 @@ export function Feedbacks() {
             </li>
           ))}
         </ul>
-        <ContactButton className="mt-10" />
       </Container>
     </Section>
   );

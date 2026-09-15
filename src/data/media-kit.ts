@@ -439,5 +439,10 @@ export const mediaKit: MediaKit = {
     highlight: "juntas",
     body: "Estou aberta a parcerias que façam sentido para os dois lados. Cada proposta é personalizada de acordo com o briefing, os objetivos da marca e o formato escolhido. Me chama para conversarmos sobre a melhor forma de criar juntas.",
     legal: "© 2026 Lana Santos · Todos os direitos reservados · Mídia Kit · Edição 2026",
+    image: {
+      alt: "Lana Santos",
+      aspect: "poster",
+      src: "/media/footer/footer.jpg",
+    },
   },
 };

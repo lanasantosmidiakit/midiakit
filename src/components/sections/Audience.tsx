@@ -34,10 +34,12 @@ export function Audience() {
           </p>
         </div> */}
 
-        <div className="mt-16 flex flex-col gap-8 border-t border-coffee/10 pt-10 md:flex-row md:items-end md:justify-between">
+        <div className="mt-16 border-t border-coffee/10 pt-10">
           <p className="max-w-xl text-sm leading-relaxed opacity-60">
             Quem não é meu público: {audience.whoIsNot}
           </p>
+        </div>
+        <div className="mt-12 flex justify-center">
           <ContactButton />
         </div>
       </Container>

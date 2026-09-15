@@ -115,7 +115,9 @@ export function Deliverables() {
         <p className="mt-6 max-w-3xl font-serif text-2xl italic leading-snug md:text-3xl">
           {deliverables.expectation}
         </p>
-        <ContactButton className="mt-10" />
+        <div className="mt-12 flex justify-center">
+          <ContactButton />
+        </div>
       </Container>
     </Section>
   );
