@@ -83,7 +83,6 @@ export type HeroContent = {
   surname: string;
   headline: string[];
   tagline: string;
-  legal: string;
   image: ImageAsset;
 };
 

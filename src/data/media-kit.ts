@@ -125,8 +125,6 @@ export const mediaKit: MediaKit = {
     headline: ["Eu não indico produtos.", "Eu faço eles brilharem."],
     tagline:
       "Crio conteúdo de beleza e moda para quem compra pelo desejo, não pelo desconto. Tutorial, teste e review com estética própria, e uma audiência que confia no que eu mostro.",
-    legal:
-      "© Lana Santos  ·  2026  ·  Todos os direitos reservados  ·  Material confidencial",
     image: {
       src: "/media/hero/capa_v2.webp",
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",

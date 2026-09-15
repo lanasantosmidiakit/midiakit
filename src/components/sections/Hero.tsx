@@ -17,9 +17,6 @@ export function Hero() {
         <p className="max-w-md text-sm leading-relaxed text-cream/80 md:ml-auto md:text-base">
           {hero.tagline}
         </p>
-        <p className="text-[10px] uppercase tracking-[0.16em] text-cream/45 md:col-span-2">
-          {hero.legal}
-        </p>
       </Container>
     </section>
   );
