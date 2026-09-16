@@ -178,7 +178,7 @@ export const mediaKit: MediaKit = {
     highlight: "que importam",
     subtitle:
       "Indicadores de Instagram e TikTok.",
-    body: "Número isolado não vende nada. No TikTok, o conteúdo abre para milhões de espectadores novos. No Instagram, Reels descobrem gente nova e Stories conversam com quem já confia. O conteúdo performa no orgânico e quando a marca amplia como mídia paga.",
+    body: "O número pelo número não adianta, né? No caso das vendas eles representam o impacto, mas também mostram o que uma comunidade pode fazer. O conteúdo performa no orgânico e mídia paga amplifica os resultados que já foram bons na sua marca.",
     caseNote:
       "Case Cléa Store. Look para o Dia dos Namorados: 40.296 visualizações, 38 salvamentos, 32 compartilhamentos e 211 interações.",
     mixTitle: "Instagram por tipo de conteúdo",
@@ -244,7 +244,7 @@ export const mediaKit: MediaKit = {
     title: "Quem é meu",
     highlight: "público",
     paragraphs: [
-      "Mulheres de 20 a 35 anos que amam beleza, moda, skincare e cabelo bonito. Elas vivem entre o Pinterest e a nostalgia y2k, acompanham tendência antes de virar tendência e têm poder de compra.",
+      "Mulheres de 20 a 35 anos que amam beleza, moda, skincare e cabelo bonito. Elas vivem entre o Pinterest e gostam da nostalgia dos anos 2000, estão antenadas nas tendências e têm poder de compra.",
       "Elas me seguem porque gostam da minha visão, se inspiram no que eu construo e, o mais importante para a sua marca, confiam nas minhas recomendações. Quando eu falo de um produto, elas não perguntam se é bom. Perguntam onde compra.",
     ],
     whoIsNot:
@@ -290,8 +290,8 @@ export const mediaKit: MediaKit = {
     highlight: "converte",
     rating: "★★★★★",
     paragraphs: [
-      "Agora imagine tirar o orçamento de criadoras que só entregam alcance e colocar em quem realmente move o produto. É essa a diferença: eu não produzo um anúncio disfarçado, produzo conteúdo que a sua audiência assiste por vontade própria, e que faz a sua marca virar desejo.",
-      "Tutorial, teste e review são os meus formatos. Hook forte no primeiro segundo, edição no ritmo da plataforma e CTA que nasce natural dentro da narrativa.",
+      "Agora imagine colocar o orçamento em uma creator que move a marca e vende o produto? É essa a diferença: os meus conteúdos são o canal para a sua marca ser visível em quem quer consumir.",
+      "Tutorial, teste e review são os meus principais formatos. Hook forte no primeiro segundo, edição no ritmo da plataforma e um CTA quase imperceptível dentro da narrativa. É o necessário no novo mercado.",
     ],
     frames: [
       {
@@ -363,7 +363,7 @@ export const mediaKit: MediaKit = {
     title: "Marcas já",
     highlight: "atendidas",
     intro:
-      "Marcas que já entraram no meu universo e saíram dele com conteúdo, comentário e venda. Meu público comenta, compartilha e compra.",
+      "Marcas que já entraram no meu universo e saíram dele com conteúdo, engajamento e venda. Meu público comenta, compartilha e compra.",
     items: [
       { id: "gocase", name: "Gocase", logo: { alt: "Gocase", aspect: "landscape", src: "/media/logos/1.webp" } },
       { id: "mac", name: "MAC", logo: { alt: "MAC", aspect: "landscape", src: "/media/logos/2.webp" } },
@@ -413,11 +413,11 @@ export const mediaKit: MediaKit = {
     eyebrow: "08 · Tamanhos e medidas",
     title: "Tamanhos e medidas",
     shipping:
-      "Endereço de envio sob solicitação, enviado por e-mail após o alinhamento da campanha.",
+      "Você pode me enviar os seus produtos, só solicitar o endereço no contato abaixo.",
     image: {
       alt: "Tamanhos e medidas de Lana Santos",
       aspect: "measures",
-      src: "/media/modelStats/modelStats_v2.webp",
+      src: "/media/modelStats/modelStats_v3.webp",
     },
   },
   deliverables: {
@@ -426,14 +426,14 @@ export const mediaKit: MediaKit = {
     footerNote:
       "Cada proposta é ajustada conforme a marca, o escopo e o volume de entregas. Pacotes combinados e exclusividade sob consulta.",
     expectation:
-      "Eu não vendo viralização nem engajamento garantido. O que eu garanto é conteúdo estratégico, criativo e coerente com a marca, com foco total em gerar desejo pelo produto de forma autêntica.",
+      "Eu garanto um conteúdo estratégico, criativo e coerente com a sua marca, com foco total em gerar desejo pelo produto de forma autêntica.",
     items: [
       {
         id: "feed",
         title: "Publi no Feed",
         tags: "Reels · TikTok · Vertical",
         price: "R$ 700",
-        body: "Vídeo com produção visual alinhada à identidade da marca e à linguagem nativa da plataforma. Hook forte, edição no ritmo certo e copy pensada para parecer conteúdo, não anúncio. Meus formatos: tutorial, teste e review, os que mais convertem no meu perfil.",
+        body: "Vídeo com produção visual alinhada à identidade da marca e à linguagem nativa da plataforma. Os formatos review, tutorial e teste são os que mais convertem no meu perfil.",
         layout: "image-right",
         tone: "light",
         images: [
@@ -469,7 +469,7 @@ export const mediaKit: MediaKit = {
         title: "Live Shop",
         tags: "1 hora · Conversão direta",
         price: "R$ 1.000/h + 15% sobre as vendas",
-        body: "Uma hora de demonstração ao vivo, respondendo dúvida em tempo real e mostrando o produto na pele. É o formato mais próximo da decisão de compra: a audiência tira a última objeção e compra ali.",
+        body: "1h de demonstração ao vivo, respondendo dúvida em tempo real e mostrando o produto para uma audiência que ainda não conhece. É o formato mais próximo da decisão de compra: quebro a objeção e compra já acontece ali",
         layout: "image-right",
         tone: "dark",
         images: [
@@ -481,7 +481,7 @@ export const mediaKit: MediaKit = {
         title: "Conteúdo UGC",
         tags: "Sem marca d’água · Alta qualidade",
         price: "Sob consulta",
-        body: "Vídeos com estética orgânica produzidos para a marca usar nos próprios canais, landing pages e anúncios pagos. Entrega sem marca d’água, com alta qualidade de imagem e som, pensada para performar como conteúdo de criadora, não como peça publicitária.",
+        body: "Vídeos orgânicos produzidos para a marca usar nos próprios canais, landing pages e anúncios pagos. Entrega sem marca d’água, com alta qualidade de imagem e som, pensada para performar como conteúdo de criadora.",
         layout: "image-left",
         tone: "light",
         images: [
@@ -516,7 +516,7 @@ export const mediaKit: MediaKit = {
     eyebrow: "10 · Dados e contato",
     title: "Vamos produzir",
     highlight: "juntas",
-    body: "Estou aberta a parcerias que façam sentido para os dois lados. Cada proposta é personalizada de acordo com o briefing, os objetivos da marca e o formato escolhido. Me chama para conversarmos sobre a melhor forma de criar juntas.",
+    body: "Cada proposta é personalizada de acordo com o briefing, os objetivos da marca e o formato escolhido.\nMe chama para conversarmos sobre.",
     legal: "© 2026 Lana Santos · Todos os direitos reservados · Mídia Kit · Edição 2026",
     image: {
       alt: "Lana Santos",

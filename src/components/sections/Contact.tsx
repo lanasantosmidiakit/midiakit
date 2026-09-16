@@ -15,7 +15,7 @@ export function Contact() {
               highlight={footer.highlight}
               className="md:text-7xl lg:text-8xl"
             />
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-cream/80 md:text-lg">
+            <p className="mt-8 max-w-xl whitespace-pre-line text-base leading-relaxed text-cream/80 md:text-lg">
               {footer.body}
             </p>
 
