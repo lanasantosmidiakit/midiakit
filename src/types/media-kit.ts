@@ -60,6 +60,8 @@ export type LinkInBioContent = {
   tagline: string;
   image: ImageAsset;
   banner: BioBanner;
+  couponsEyebrow: string;
+  couponsTitle: string;
   coupons: BioCoupon[];
 };
 

@@ -180,17 +180,14 @@ export function LinkInBio() {
   const { linkInBio, contact } = mediaKit;
   const [activeCoupon, setActiveCoupon] = useState<BioCoupon | null>(null);
 
-  const cards: BannerCard[] = [
-    linkInBio.banner,
-    ...linkInBio.coupons.map((coupon) => ({
-      id: coupon.id,
-      title: coupon.title,
-      summary: coupon.summary,
-      image: coupon.image,
-      href: coupon.href,
-      coupon: coupon.coupon,
-    })),
-  ];
+  const cards: BannerCard[] = linkInBio.coupons.map((coupon) => ({
+    id: coupon.id,
+    title: coupon.title,
+    summary: coupon.summary,
+    image: coupon.image,
+    href: coupon.href,
+    coupon: coupon.coupon,
+  }));
 
   return (
     <main className="flex min-h-dvh flex-col bg-coffee text-cream">
@@ -221,6 +218,25 @@ export function LinkInBio() {
           </ul>
 
           <ul className="mt-10 flex w-full flex-col gap-4">
+            <li>
+              <BioBannerCard item={linkInBio.banner} reversed={false} />
+            </li>
+          </ul>
+
+          <div className="mt-12 w-full text-center">
+            <p className="text-[11px] uppercase tracking-[0.28em] text-rose-gold">
+              {linkInBio.couponsEyebrow}
+            </p>
+            <h2 className="mt-3 font-serif text-4xl leading-none">
+              {linkInBio.couponsTitle.replace(/\s+\S+$/, " ")}
+              <span className="italic font-normal">
+                {linkInBio.couponsTitle.trim().split(" ").pop()}
+              </span>
+            </h2>
+            <div className="mx-auto mt-5 h-px w-16 bg-cream/25" />
+          </div>
+
+          <ul className="mt-8 flex w-full flex-col gap-4">
             {cards.map((item, index) => {
               const coupon = linkInBio.coupons.find(
                 (entry) => entry.id === item.id,
@@ -230,7 +246,7 @@ export function LinkInBio() {
                 <li key={item.id}>
                   <BioBannerCard
                     item={item}
-                    reversed={index % 2 === 1}
+                    reversed={index % 2 === 0}
                     onOpenCoupon={
                       coupon ? () => setActiveCoupon(coupon) : undefined
                     }

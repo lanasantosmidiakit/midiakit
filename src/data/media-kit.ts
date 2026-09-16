@@ -23,7 +23,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "bio",
-      src: "/media/linknabio/perfil_v4.webp",
+      src: "/media/linknabio/perfil_v5.webp",
     },
     banner: {
       id: "midiakit",
@@ -36,6 +36,8 @@ export const mediaKit: MediaKit = {
         src: "/media/linknabio/banner1_v2.webp",
       },
     },
+    couponsEyebrow: "Cupons",
+    couponsTitle: "Lojas parceiras",
     coupons: [
       {
         id: "mac",
@@ -46,7 +48,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "MAC Cosmetics",
           aspect: "tile",
-          src: "/media/linknabio/banner2.webp",
+          src: "/media/linknabio/banner2_v2.webp",
         },
       },
       {
@@ -58,7 +60,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Cléa Store",
           aspect: "tile",
-          src: "/media/linknabio/banner3.webp",
+          src: "/media/linknabio/banner3_v2.webp",
         },
       },
       {
@@ -70,7 +72,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Aura Beauty",
           aspect: "tile",
-          src: "/media/linknabio/banner4.webp",
+          src: "/media/linknabio/banner4_v2.webp",
         },
       },
       {
@@ -94,7 +96,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Saint Germain",
           aspect: "tile",
-          src: "/media/linknabio/banner6.webp",
+          src: "/media/linknabio/banner2.webp",
         },
       },
     ],
