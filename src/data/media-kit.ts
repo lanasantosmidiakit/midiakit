@@ -23,7 +23,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "bio",
-      src: "/media/linknabio/perfil_v5.webp",
+      src: "/media/linknabio/perfil_v6.webp",
     },
     banner: {
       id: "midiakit",

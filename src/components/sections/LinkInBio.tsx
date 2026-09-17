@@ -143,7 +143,7 @@ function BioBannerCard({
 
   return (
     <article
-      className={`flex h-[168px] overflow-hidden rounded-2xl bg-cream/8 ring-1 ring-cream/12 ${
+      className={`flex h-[168px] overflow-hidden rounded-2xl bg-coffee text-cream ring-1 ring-coffee/40 ${
         reversed ? "flex-row-reverse" : ""
       }`}
     >
@@ -190,17 +190,16 @@ export function LinkInBio() {
   }));
 
   return (
-    <main className="flex min-h-dvh flex-col bg-coffee text-cream">
-      <div className="mx-auto w-full max-w-lg">
-        <MediaImage
-          {...linkInBio.image}
-          className="w-full"
-          sizes="(min-width: 512px) 512px, 100vw"
-          priority
-        />
-        <h1 className="sr-only">{linkInBio.name}</h1>
+    <main className="flex min-h-dvh flex-col bg-white text-coffee">
+      <MediaImage
+        {...linkInBio.image}
+        className="w-full"
+        sizes="100vw"
+        priority
+      />
+      <h1 className="sr-only">{linkInBio.name}</h1>
 
-        <div className="flex flex-col items-center px-5 pt-8 pb-14">
+      <div className="mx-auto flex w-full max-w-lg flex-col items-center px-5 pt-8 pb-14">
           <ul className="flex items-center gap-4">
             {contact.socials.map((social) => (
               <li key={social.id}>
@@ -209,7 +208,7 @@ export function LinkInBio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex size-12 items-center justify-center rounded-full border border-cream/25 text-cream transition hover:border-cream hover:bg-cream/10"
+                  className="flex size-12 items-center justify-center rounded-full border border-coffee/25 text-coffee transition hover:border-coffee hover:bg-coffee hover:text-cream"
                 >
                   {social.id === "instagram" ? <InstagramIcon /> : <TikTokIcon />}
                 </a>
@@ -233,7 +232,7 @@ export function LinkInBio() {
                 {linkInBio.couponsTitle.trim().split(" ").pop()}
               </span>
             </h2>
-            <div className="mx-auto mt-5 h-px w-16 bg-cream/25" />
+            <div className="mx-auto mt-5 h-px w-16 bg-coffee/20" />
           </div>
 
           <ul className="mt-8 flex w-full flex-col gap-4">
@@ -255,10 +254,9 @@ export function LinkInBio() {
               );
             })}
           </ul>
-        </div>
       </div>
 
-      <p className="px-6 pb-8 text-center text-[10px] uppercase tracking-[0.16em] text-cream/40">
+      <p className="px-6 pb-8 text-center text-[10px] uppercase tracking-[0.16em] text-coffee/45">
         © 2026 Lana Santos
       </p>
 

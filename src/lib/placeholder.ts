@@ -12,7 +12,7 @@ export const ASPECT_CLASS: Record<AspectRatio, string> = {
   about: "aspect-[2400/2490]",
   measures: "aspect-[2400/2388]",
   tile: "aspect-[500/500]",
-  bio: "aspect-[1800/2798]",
+  bio: "aspect-[1600/900]",
 };
 
 export const ASPECT_PIXELS: Record<AspectRatio, { width: number; height: number }> = {
@@ -27,7 +27,7 @@ export const ASPECT_PIXELS: Record<AspectRatio, { width: number; height: number 
   about: { width: 2400, height: 2490 },
   measures: { width: 2400, height: 2388 },
   tile: { width: 500, height: 500 },
-  bio: { width: 1800, height: 2798 },
+  bio: { width: 1600, height: 900 },
 };
 
 const PLACEHOLDER_BG = "6B2136";
