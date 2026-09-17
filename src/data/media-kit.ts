@@ -23,7 +23,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "bio",
-      src: "/media/linknabio/perfil_v6.webp",
+      src: "/media/linknabio/perfil_v7.webp",
     },
     banner: {
       id: "midiakit",
@@ -33,7 +33,7 @@ export const mediaKit: MediaKit = {
       image: {
         alt: "Mídia kit Lana Santos",
         aspect: "tile",
-        src: "/media/linknabio/banner1_v2.webp",
+        src: "/media/linknabio/banner1.webp",
       },
     },
     couponsEyebrow: "Cupons",
@@ -48,7 +48,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "MAC Cosmetics",
           aspect: "tile",
-          src: "/media/linknabio/banner2_v2.webp",
+          src: "/media/linknabio/banner2.webp",
         },
       },
       {
@@ -60,7 +60,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Cléa Store",
           aspect: "tile",
-          src: "/media/linknabio/banner3_v2.webp",
+          src: "/media/linknabio/banner3.webp",
         },
       },
       {
@@ -72,7 +72,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Aura Beauty",
           aspect: "tile",
-          src: "/media/linknabio/banner4_v2.webp",
+          src: "/media/linknabio/banner4.webp",
         },
       },
       {
@@ -96,7 +96,7 @@ export const mediaKit: MediaKit = {
         image: {
           alt: "Saint Germain",
           aspect: "tile",
-          src: "/media/linknabio/banner2.webp",
+          src: "/media/linknabio/banner6.webp",
         },
       },
     ],
@@ -128,7 +128,7 @@ export const mediaKit: MediaKit = {
     tagline:
       "Crio conteúdo de beleza e moda para quem compra pelo desejo, não pelo desconto. Tutorial, teste e review com estética própria, e uma audiência que confia no que eu mostro.",
     image: {
-      src: "/media/hero/capa_v2.webp",
+      src: "/media/hero/capa_v3.webp",
       alt: "Lana Santos, Brazilian Beauty & Fashion Creator",
       aspect: "landscape",
       label: "Hero",

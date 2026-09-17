@@ -143,15 +143,15 @@ function BioBannerCard({
 
   return (
     <article
-      className={`flex h-[168px] overflow-hidden rounded-2xl bg-coffee text-cream ring-1 ring-coffee/40 ${
+      className={`flex min-h-[168px] items-center overflow-hidden rounded-2xl bg-coffee text-cream ring-1 ring-coffee/40 ${
         reversed ? "flex-row-reverse" : ""
       }`}
     >
       <div className="flex min-w-0 flex-1 flex-col justify-center px-5 py-4">
-        <h2 className="truncate font-serif text-2xl leading-tight">
+        <h2 className="font-serif text-xl leading-tight md:text-2xl">
           {item.title}
         </h2>
-        <p className="mt-1 line-clamp-2 text-sm leading-snug text-cream/70">
+        <p className="mt-1 text-sm leading-snug text-cream/70">
           {item.summary}
         </p>
         {item.coupon && onOpenCoupon ? (
@@ -164,12 +164,12 @@ function BioBannerCard({
           </Link>
         )}
       </div>
-      <div className="relative w-[42%] shrink-0 overflow-hidden">
+      <div className="relative size-[168px] shrink-0 overflow-hidden">
         <MediaImage
           {...item.image}
-          unconstrained
-          className="absolute inset-0 h-full w-full"
-          sizes="220px"
+          className="h-full w-full"
+          sizes="168px"
+          unoptimized
         />
       </div>
     </article>
