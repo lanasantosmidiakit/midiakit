@@ -417,7 +417,7 @@ export const mediaKit: MediaKit = {
     image: {
       alt: "Tamanhos e medidas de Lana Santos",
       aspect: "measures",
-      src: "/media/modelStats/modelStats_v3.webp",
+      src: "/media/modelStats/modelStats_v4.webp",
     },
   },
   deliverables: {
