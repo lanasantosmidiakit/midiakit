@@ -40,7 +40,7 @@ export const mediaKit: MediaKit = {
       {
         id: "consultoria",
         title: "Consultoria individual",
-        summary: "TikTok Shop com estratégia e direção. Vagas limitadas.",
+        summary: "Aceleração ao TikTok Shop.",
         href: "https://form.respondi.app/31zb342l",
         cta: "Aplicar agora",
         image: {
