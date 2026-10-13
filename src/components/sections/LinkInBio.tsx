@@ -13,7 +13,12 @@ type BannerCard = {
   image: ImageAsset;
   href?: string;
   coupon?: string;
+  cta?: string;
 };
+
+function isExternalHref(href?: string) {
+  return Boolean(href && /^https?:\/\//i.test(href));
+}
 
 function InstagramIcon() {
   return (
@@ -140,6 +145,7 @@ function BioBannerCard({
 }) {
   const buttonClass =
     "mt-3 inline-flex w-fit border border-cream/35 px-4 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-cream transition hover:border-cream hover:bg-cream hover:text-coffee";
+  const cta = item.cta ?? "Saiba mais";
 
   return (
     <article
@@ -156,11 +162,20 @@ function BioBannerCard({
         </p>
         {item.coupon && onOpenCoupon ? (
           <button type="button" onClick={onOpenCoupon} className={buttonClass}>
-            Saiba mais
+            {cta}
           </button>
+        ) : isExternalHref(item.href) ? (
+          <a
+            href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonClass}
+          >
+            {cta}
+          </a>
         ) : (
           <Link href={item.href ?? "/midiakit"} className={buttonClass}>
-            Saiba mais
+            {cta}
           </Link>
         )}
       </div>
@@ -217,9 +232,11 @@ export function LinkInBio() {
           </ul>
 
           <ul className="mt-10 flex w-full flex-col gap-4">
-            <li>
-              <BioBannerCard item={linkInBio.banner} reversed={false} />
-            </li>
+            {linkInBio.banners.map((item, index) => (
+              <li key={item.id}>
+                <BioBannerCard item={item} reversed={index % 2 === 1} />
+              </li>
+            ))}
           </ul>
 
           <div className="mt-12 w-full text-center">

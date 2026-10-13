@@ -25,17 +25,31 @@ export const mediaKit: MediaKit = {
       aspect: "bio",
       src: "/media/linknabio/perfil_v7.webp",
     },
-    banner: {
-      id: "midiakit",
-      title: "Mídia kit",
-      summary: "Números, formatos e parcerias.",
-      href: "/midiakit",
-      image: {
-        alt: "Mídia kit Lana Santos",
-        aspect: "tile",
-        src: "/media/linknabio/banner1.webp",
+    banners: [
+      {
+        id: "midiakit",
+        title: "Mídia kit",
+        summary: "Números, formatos e parcerias.",
+        href: "https://w.app/midiakitlana",
+        image: {
+          alt: "Mídia kit Lana Santos",
+          aspect: "tile",
+          src: "/media/linknabio/banner1.webp",
+        },
       },
-    },
+      {
+        id: "consultoria",
+        title: "Consultoria individual",
+        summary: "TikTok Shop com estratégia e direção. Vagas limitadas.",
+        href: "https://form.respondi.app/31zb342l",
+        cta: "Aplicar agora",
+        image: {
+          alt: "Consultoria individual com Lana Santos",
+          aspect: "tile",
+          src: "/media/linknabio/consultoria.webp",
+        },
+      },
+    ],
     couponsEyebrow: "Cupons",
     couponsTitle: "Lojas parceiras",
     coupons: [
@@ -97,6 +111,18 @@ export const mediaKit: MediaKit = {
           alt: "Saint Germain",
           aspect: "tile",
           src: "/media/linknabio/banner6.webp",
+        },
+      },
+      {
+        id: "skelt",
+        title: "Skelt",
+        summary: "Cupom para a Skelt.",
+        coupon: "SKLANASANCOST",
+        href: "https://www.skelt.com.br/?utm_source=creators&utm_medium=SKLANASANCOST&utm_campaign=inbazz",
+        image: {
+          alt: "Skelt",
+          aspect: "tile",
+          src: "/media/linknabio/banner7.webp",
         },
       },
     ],

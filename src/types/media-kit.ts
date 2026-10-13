@@ -43,6 +43,7 @@ export type BioBanner = {
   summary: string;
   href: string;
   image: ImageAsset;
+  cta?: string;
 };
 
 export type BioCoupon = {
@@ -59,7 +60,7 @@ export type LinkInBioContent = {
   handle: string;
   tagline: string;
   image: ImageAsset;
-  banner: BioBanner;
+  banners: BioBanner[];
   couponsEyebrow: string;
   couponsTitle: string;
   coupons: BioCoupon[];
